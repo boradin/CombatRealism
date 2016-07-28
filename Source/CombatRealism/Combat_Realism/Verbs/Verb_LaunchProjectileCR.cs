@@ -455,7 +455,7 @@ namespace Combat_Realism
             }
             if (this.projectilePropsCR.pelletCount < 1)
             {
-                Log.Error(this.ownerEquipment.LabelBaseCap + " tried firing with pelletCount less than 1.");
+                Log.Error(this.ownerEquipment.LabelCap + " tried firing with pelletCount less than 1.");
                 return false;
             }
             for (int i = 0; i < this.projectilePropsCR.pelletCount; i++)

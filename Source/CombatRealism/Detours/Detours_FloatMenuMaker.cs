@@ -52,7 +52,7 @@ namespace Combat_Realism.Detours
                                 rangedAct();
                             });
                         }
-                        floatMenuOption.label = text;
+                        floatMenuOption.Label = text;
                         list.Add(floatMenuOption);
                     }
 
@@ -90,7 +90,7 @@ namespace Combat_Realism.Detours
                             meleeAct();
                         });
                     }
-                    floatMenuOption2.label = text2;
+                    floatMenuOption2.Label = text2;
                     list.Add(floatMenuOption2);
                 }
 
@@ -196,31 +196,31 @@ namespace Combat_Realism.Detours
                         {
                             item2 = new FloatMenuOption("ConsumeThing".Translate(new object[]
 					{
-						t.LabelBaseShort
+						t.LabelShort
 					}) + " (" + "Teetotaler".Translate() + ")", null, MenuOptionPriority.Medium, null, null);
                         }
                         else if (!pawn.CanReach(t, PathEndMode.OnCell, Danger.Deadly, false, TraverseMode.ByPawn))
                         {
                             item2 = new FloatMenuOption("ConsumeThing".Translate(new object[]
 					{
-						t.LabelBaseShort
+						t.LabelShort
 					}) + " (" + "NoPath".Translate() + ")", null, MenuOptionPriority.Medium, null, null);
                         }
                         else if (!pawn.CanReserve(t, 1))
                         {
                             item2 = new FloatMenuOption("ConsumeThing".Translate(new object[]
 					{
-						t.LabelBaseShort
+						t.LabelShort
 					}) + " (" + "ReservedBy".Translate(new object[]
 					{
-						Find.Reservations.FirstReserverOf(t, pawn.Faction).LabelBaseShort
+						Find.Reservations.FirstReserverOf(t, pawn.Faction).LabelShort
 					}) + ")", null, MenuOptionPriority.Medium, null, null);
                         }
                         else
                         {
                             item2 = new FloatMenuOption("ConsumeThing".Translate(new object[]
 					{
-						t.LabelBaseShort
+						t.LabelShort
 					}), new Action(delegate
                             {
                                 t.SetForbidden(false, true);
@@ -240,7 +240,7 @@ namespace Combat_Realism.Detours
                     Pawn victim = (Pawn)current4.Thing;
                     if (!victim.InBed() && pawn.CanReserveAndReach(victim, PathEndMode.OnCell, Danger.Deadly, 1) && !victim.IsPrisonerOfColony)
                     {
-                        if ((victim.Faction == Faction.OfColony && victim.MentalStateDef == null) || (victim.Faction != Faction.OfColony && victim.MentalStateDef == null && !victim.IsPrisonerOfColony && (victim.Faction == null || !victim.Faction.HostileTo(Faction.OfColony))))
+                        if ((victim.Faction == Faction.OfPlayer && victim.MentalStateDef == null) || (victim.Faction != Faction.OfPlayer && victim.MentalStateDef == null && !victim.IsPrisonerOfColony && (victim.Faction == null || !victim.Faction.HostileTo(Faction.OfPlayer))))
                         {
                             List<FloatMenuOption> arg_8E1_0 = list;
                             Pawn victim2 = victim;
@@ -271,7 +271,7 @@ namespace Combat_Realism.Detours
                                 ConceptDatabase.KnowledgeDemonstrated(ConceptDefOf.Rescuing, KnowledgeAmount.Total);
                             }), MenuOptionPriority.Medium, null, victim2));
                         }
-                        if (victim.MentalStateDef != null || (victim.RaceProps.Humanlike && victim.Faction != Faction.OfColony))
+                        if (victim.MentalStateDef != null || (victim.RaceProps.Humanlike && victim.Faction != Faction.OfPlayer))
                         {
                             List<FloatMenuOption> arg_962_0 = list;
                             Pawn victim2 = victim;
@@ -348,7 +348,7 @@ namespace Combat_Realism.Detours
 					stripTarg.Thing.LabelCap
 				}) + " (" + "ReservedBy".Translate(new object[]
 				{
-					Find.Reservations.FirstReserverOf(stripTarg, pawn.Faction).LabelBaseShort
+					Find.Reservations.FirstReserverOf(stripTarg, pawn.Faction).LabelShort
 				}) + ")", null, MenuOptionPriority.Medium, null, null);
                     }
                     else
@@ -401,7 +401,7 @@ namespace Combat_Realism.Detours
 						        eqLabel
 					        }) + " (" + "ReservedBy".Translate(new object[]
 					        {
-						        Find.Reservations.FirstReserverOf(equipment, pawn.Faction).LabelBaseShort
+						        Find.Reservations.FirstReserverOf(equipment, pawn.Faction).LabelShort
 					        }) + ")", null, MenuOptionPriority.Medium, null, null);
                         }
                         else if (!pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation))
@@ -467,7 +467,7 @@ namespace Combat_Realism.Detours
 						apparel.Label
 					}) + " (" + "ReservedBy".Translate(new object[]
 					{
-						pawn3.LabelBaseShort
+						pawn3.LabelShort
 					}) + ")", null, MenuOptionPriority.Medium, null, null);
                         }
                         else if (!ApparelUtility.HasPartsToWear(pawn, apparel.def))
@@ -487,7 +487,7 @@ namespace Combat_Realism.Detours
                             }
                             else
                             {
-                                wearOption = new FloatMenuOption("ForceWear".Translate(new object[] { apparel.LabelBaseShort }), 
+                                wearOption = new FloatMenuOption("ForceWear".Translate(new object[] { apparel.LabelShort }), 
                                     new Action(delegate
                                         {
                                             apparel.SetForbidden(false, true);
@@ -516,19 +516,19 @@ namespace Combat_Realism.Detours
                             int count = 0;
                             if (!pawn.CanReach(item, PathEndMode.Touch, Danger.Deadly))
                             {
-                                pickUpOption = new FloatMenuOption("CR_CannotPickUp".Translate() + " " + item.LabelBaseShort + " (" + "NoPath".Translate() + ")", null);
+                                pickUpOption = new FloatMenuOption("CR_CannotPickUp".Translate() + " " + item.LabelShort + " (" + "NoPath".Translate() + ")", null);
                             }
                             else if (!pawn.CanReserve(item))
                             {
-                                pickUpOption = new FloatMenuOption("CR_CannotPickUp".Translate() + " " + item.LabelBaseShort + " (" + "ReservedBy".Translate(new object[] { Find.Reservations.FirstReserverOf(item, pawn.Faction) }), null);
+                                pickUpOption = new FloatMenuOption("CR_CannotPickUp".Translate() + " " + item.LabelShort + " (" + "ReservedBy".Translate(new object[] { Find.Reservations.FirstReserverOf(item, pawn.Faction) }), null);
                             }
                             else if (!compInventory.CanFitInInventory(item, out count))
                             {
-                                pickUpOption = new FloatMenuOption("CR_CannotPickUp".Translate() + " " + item.LabelBaseShort + " (" + "CR_InventoryFull".Translate() + ")", null);
+                                pickUpOption = new FloatMenuOption("CR_CannotPickUp".Translate() + " " + item.LabelShort + " (" + "CR_InventoryFull".Translate() + ")", null);
                             }
                             else
                             {
-                                pickUpOption = new FloatMenuOption("CR_PickUp".Translate() + " " + item.LabelBaseShort,
+                                pickUpOption = new FloatMenuOption("CR_PickUp".Translate() + " " + item.LabelShort,
                                     new Action(delegate
                                     {
                                         item.SetForbidden(false);
@@ -541,7 +541,7 @@ namespace Combat_Realism.Detours
                             if (count > 1 && item.stackCount > 1)
                             {
                                 int numToCarry = Math.Min(count, item.stackCount);
-                                FloatMenuOption pickUpStackOption = new FloatMenuOption("CR_PickUp".Translate() + " " + item.LabelBaseShort + " x" + numToCarry.ToString(),
+                                FloatMenuOption pickUpStackOption = new FloatMenuOption("CR_PickUp".Translate() + " " + item.LabelShort + " x" + numToCarry.ToString(),
                                     new Action(delegate
                                     {
                                         item.SetForbidden(false);
@@ -645,13 +645,13 @@ namespace Combat_Realism.Detours
                         string str3 = string.Empty;
                         if (pTarg.Faction != null)
                         {
-                            str3 = " (" + pTarg.Faction.name + ")";
+                            str3 = " (" + pTarg.Faction.Name + ")";
                         }
                         List<FloatMenuOption> arg_142E_0 = list;
                         Thing thing = dest2.Thing;
                         arg_142E_0.Add(new FloatMenuOption("TradeWith".Translate(new object[]
 				{
-					pTarg.LabelBaseShort
+					pTarg.LabelShort
 				}) + str3, action6, MenuOptionPriority.Medium, null, thing));
                     }
                 }
@@ -693,8 +693,8 @@ namespace Combat_Realism.Detours
                     {
                         list.Add(new FloatMenuOption("IsReservedBy".Translate(new object[]
 				{
-					current11.LabelBaseShort.CapitalizeFirst(),
-					pawn4.LabelBaseShort
+					current11.LabelShort.CapitalizeFirst(),
+					pawn4.LabelShort
 				}), null, MenuOptionPriority.Medium, null, null));
                     }
                     else
@@ -732,7 +732,7 @@ namespace Combat_Realism.Detours
                                                             string label2 = "CannotGenericWork".Translate(new object[]
 													{
 														workGiver_Scanner.def.verb,
-														current11.LabelBaseShort
+														current11.LabelShort
 													}) + " (" + JobFailReason.Reason + ")";
                                                             list.Add(new FloatMenuOption(label2, null, MenuOptionPriority.Medium, null, null));
                                                         }
@@ -755,7 +755,7 @@ namespace Combat_Realism.Detours
                                                             label = "CannotGenericAlreadyAm".Translate(new object[]
 													{
 														workType.gerundLabel,
-														current11.LabelBaseShort
+														current11.LabelShort
 													});
                                                         }
                                                         else if (pawn.workSettings.GetPriority(workType) == 0)
@@ -789,10 +789,13 @@ namespace Combat_Realism.Detours
 														current11.Label
 													});
                                                             Job localJob = job;
-                                                            WorkTypeDef localWorkTypeDef = workType;
-                                                            action7 = new Action(delegate { pawn.thinker.GetMainTreeThinkNode<JobGiver_Work>().TryStartPrioritizedWorkOn(pawn, localJob, localWorkTypeDef); });
+                                                            // WorkTypeDef localWorkTypeDef = workType;
+                                                            WorkGiver localWorkGiver = workGiver_Scanner;
+                                                            List<IntVec3> localPotentialCells = (List<IntVec3>)workGiver_Scanner.PotentialWorkCellsGlobal(pawn);
+
+                                                            action7 = new Action(delegate { foreach (var cell in localPotentialCells) { pawn.thinker.GetMainTreeThinkNode<JobGiver_Work>().TryStartPrioritizedWorkOn(pawn, localJob, localWorkGiver, cell); } });
                                                         }
-                                                        if (!list.Any(op => op.label == label))
+                                                        if (!list.Any(op => op.Label == label))
                                                         {
                                                             list.Add(new FloatMenuOption(label, action7, MenuOptionPriority.Medium, null, null));
                                                         }

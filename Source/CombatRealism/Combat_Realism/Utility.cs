@@ -35,7 +35,7 @@ namespace Combat_Realism
         public static float GetMoveSpeed(Pawn pawn)
         {
             float movePerTick = 60 / pawn.GetStatValue(StatDefOf.MoveSpeed, false);    //Movement per tick
-            movePerTick += PathGrid.CalculatedCostAt(pawn.Position, false);
+            movePerTick += PathGrid.CalculatedCostAt(pawn.Position, false, pawn.Position); //FIXME
             Building edifice = pawn.Position.GetEdifice();
             if (edifice != null)
             {

@@ -16,7 +16,7 @@ namespace Combat_Realism
 
         private static Texture2D FullTex;
         private static Texture2D EmptyTex;
-        private static Texture2D BGTex;
+        private static new Texture2D BGTex;
 
         public override float Width
         {

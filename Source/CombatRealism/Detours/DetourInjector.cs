@@ -24,8 +24,8 @@ namespace Combat_Realism.Detours
                 typeof(Detours_TooltipUtility).GetMethod("ShotCalculationTipString", BindingFlags.Static | BindingFlags.NonPublic)))
                 return false;
 
-            // Detour FloatMenuMaker
-            if(!CommunityCoreLibrary.Detours.TryDetourFromTo(typeof(FloatMenuMaker).GetMethod("ChoicesAtFor", BindingFlags.Static | BindingFlags.Public),
+            // Detour Detours_FloatMenuMaker
+            if(!CommunityCoreLibrary.Detours.TryDetourFromTo(typeof(Detours_FloatMenuMaker).GetMethod("ChoicesAtFor", BindingFlags.Static | BindingFlags.Public),
                 typeof(Detours_FloatMenuMaker).GetMethod("ChoicesAtFor", BindingFlags.Static | BindingFlags.NonPublic)))
                 return false;
 

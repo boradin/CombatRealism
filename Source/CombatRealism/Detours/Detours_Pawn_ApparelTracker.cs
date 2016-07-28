@@ -56,7 +56,7 @@ namespace Combat_Realism.Detours
                 Apparel apparel = _this.WornApparel[i];
                 if (!ApparelUtility.CanWearTogether(newApparel.def, apparel.def))
                 {
-                    bool forbid = _this.pawn.Faction.HostileTo(Faction.OfColony);
+                    bool forbid = _this.pawn.Faction.HostileTo(Faction.OfPlayer);
                     if (dropReplacedApparel)
                     {
                         Apparel apparel2;

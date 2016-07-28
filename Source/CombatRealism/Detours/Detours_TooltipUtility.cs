@@ -19,16 +19,17 @@ namespace Combat_Realism.Detours
                 if (pawn != null && pawn != target && pawn.equipment != null && pawn.equipment.Primary != null)
                 {
                     Verb_LaunchProjectile verb_LaunchProjectile = pawn.equipment.PrimaryEq.PrimaryVerb as Verb_LaunchProjectile;
+                    TargetInfo tgtInfo = new TargetInfo(target);
                     if (verb_LaunchProjectile != null)
                     {
                         stringBuilder.AppendLine();
                         stringBuilder.Append("ShotBy".Translate(new object[]
 				        {
-					        pawn.LabelBaseShort
+					        pawn.LabelShort
 				        }) + ":");
                         if (verb_LaunchProjectile.CanHitTarget(target))
                         {
-                            HitReport hitReport = verb_LaunchProjectile.HitReportFor(target);
+                            ShotReport hitReport = ShotReport.HitReportFor(pawn, verb_LaunchProjectile, tgtInfo);
                             stringBuilder.Append(hitReport.GetTextReadout());
                         }
                         else
@@ -43,7 +44,7 @@ namespace Combat_Realism.Detours
                         if (verbCR != null)
                         {
                             stringBuilder.AppendLine();
-                            stringBuilder.Append("ShotBy".Translate(new object[] { pawn.LabelBaseShort }) + ":\n");
+                            stringBuilder.Append("ShotBy".Translate(new object[] { pawn.LabelShort }) + ":\n");
                             if (verbCR.CanHitTarget(target))
                             {
                                 ShiftVecReport report = verbCR.ShiftVecReportFor(target);

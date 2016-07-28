@@ -141,7 +141,7 @@ namespace Combat_Realism
                 GUI.color = _highlightColor;
                 GUI.DrawTexture( rect, TexUI.HighlightTex );
             }
-            if ( Widgets.InvisibleButton( rect ) && Event.current.button == 1 )
+            if ( Widgets.ButtonInvisible( rect ) && Event.current.button == 1 )
             {
                 List<FloatMenuOption> floatOptionList = new List<FloatMenuOption>();
                 floatOptionList.Add( new FloatMenuOption( "ThingInfo".Translate(), delegate
@@ -217,7 +217,7 @@ namespace Combat_Realism
                     }
                     floatOptionList.Add( new FloatMenuOption( "DropThing".Translate(), action, MenuOptionPriority.Medium, null, null ) );
                 }
-                FloatMenu window = new FloatMenu( floatOptionList, thing.LabelCap, false, false );
+                FloatMenu window = new FloatMenu( floatOptionList, thing.LabelCap, false );
                 Find.WindowStack.Add( window );
             }
             if ( thing.def.DrawMatSingle != null && thing.def.DrawMatSingle.mainTexture != null )

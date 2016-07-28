@@ -100,7 +100,7 @@ namespace Combat_Realism
             }
         }
 
-        public override Vector2 InitialWindowSize
+        public Vector2 InitialWindowSize
         {
             get
             {
@@ -156,7 +156,7 @@ namespace Combat_Realism
             // DRAW CONTENTS
             // buttons
             // select loadout
-            if ( Widgets.TextButton( selectRect, "CR.SelectLoadout".Translate() ) )
+            if ( Widgets.ButtonText( selectRect, "CR.SelectLoadout".Translate() ) )
             {
                 List<FloatMenuOption> options = new List<FloatMenuOption>();
 
@@ -175,14 +175,14 @@ namespace Combat_Realism
                 Find.WindowStack.Add( new FloatMenu( options ) );
             }
             // create loadout
-            if ( Widgets.TextButton( newRect, "CR.NewLoadout".Translate() ) )
+            if ( Widgets.ButtonText( newRect, "CR.NewLoadout".Translate() ) )
             {
                 var loadout = new Loadout();
                 LoadoutManager.AddLoadout( loadout );
                 CurrentLoadout = loadout;
             }
             // delete loadout
-            if ( loadouts.Any( l => l.canBeDeleted ) && Widgets.TextButton( deleteRect, "CR.DeleteLoadout".Translate() ) )
+            if ( loadouts.Any( l => l.canBeDeleted ) && Widgets.ButtonText( deleteRect, "CR.DeleteLoadout".Translate() ) )
             {
                 List<FloatMenuOption> options = new List<FloatMenuOption>();
 
@@ -246,28 +246,28 @@ namespace Combat_Realism
 
             // Ranged weapons
             GUI.color = _sourceType == SourceSelection.Ranged ? GenUI.MouseoverColor : Color.white;
-            if ( Widgets.ImageButton( button, _iconRanged ) )
+            if ( Widgets.ButtonImage( button, _iconRanged ) )
                 SetSource( SourceSelection.Ranged );
             TooltipHandler.TipRegion( button, "CR.SourceRangedTip".Translate() );
             button.x += 24f + _margin;
 
             // Melee weapons
             GUI.color = _sourceType == SourceSelection.Melee ? GenUI.MouseoverColor : Color.white;
-            if ( Widgets.ImageButton( button, _iconMelee ) )
+            if ( Widgets.ButtonImage( button, _iconMelee ) )
                 SetSource( SourceSelection.Melee );
             TooltipHandler.TipRegion( button, "CR.SourceMeleeTip".Translate() );
             button.x += 24f + _margin;
 
             // Ammo
             GUI.color = _sourceType == SourceSelection.Ammo ? GenUI.MouseoverColor : Color.white;
-            if ( Widgets.ImageButton( button, _iconAmmo ) )
+            if ( Widgets.ButtonImage( button, _iconAmmo ) )
                 SetSource( SourceSelection.Ammo );
             TooltipHandler.TipRegion( button, "CR.SourceAmmoTip".Translate() );
             button.x += 24f + _margin;
 
             // All
             GUI.color = _sourceType == SourceSelection.All ? GenUI.MouseoverColor : Color.white;
-            if ( Widgets.ImageButton( button, _iconAll ) )
+            if ( Widgets.ButtonImage( button, _iconAll ) )
                 SetSource( SourceSelection.All );
             TooltipHandler.TipRegion( button, "CR.SourceAllTip".Translate() );
 
@@ -415,7 +415,7 @@ namespace Combat_Realism
 
                 if ( ( !ammoSet?.ammoTypes.NullOrEmpty() ) ?? false )
                 {
-                    if ( Widgets.ImageButton( ammoRect, _iconAmmoAdd ) )
+                    if ( Widgets.ButtonImage( ammoRect, _iconAmmoAdd ) )
                     {
                         List<FloatMenuOption> options = new List<FloatMenuOption>();
 
@@ -438,7 +438,7 @@ namespace Combat_Realism
             // delete
             if ( Mouse.IsOver( deleteRect ) )
                 GUI.DrawTexture( row, TexUI.HighlightTex );
-            if ( Widgets.ImageButton( deleteRect, _iconClear ) )
+            if ( Widgets.ButtonImage( deleteRect, _iconClear ) )
                 CurrentLoadout.RemoveSlot( slot );
             TooltipHandler.TipRegion( deleteRect, "CR.DeleteFilter".Translate() );
         }
@@ -554,7 +554,7 @@ namespace Combat_Realism
                 Text.Anchor = TextAnchor.UpperLeft;
 
                 Widgets.DrawHighlightIfMouseover( row );
-                if ( Widgets.InvisibleButton( row ) )
+                if ( Widgets.ButtonInvisible( row ) )
                 {
                     var slot = new LoadoutSlot( _source[i], 1 );
                     CurrentLoadout.AddSlot( slot );

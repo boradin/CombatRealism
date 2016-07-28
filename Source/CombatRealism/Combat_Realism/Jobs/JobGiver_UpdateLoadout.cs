@@ -90,7 +90,7 @@ namespace Combat_Realism
                                     x => !x.IsForbidden(pawn) && pawn.CanReserve(x));
                                 if (curThing != null)
                                 {
-                                    if (!curSlot.Def.IsNutritionSource && numCarried / curSlot.Count <= 0.5f) curPriority = ItemPriority.LowStock;
+                                    if (!curSlot.Def.IsNutritionGivingIngestible && numCarried / curSlot.Count <= 0.5f) curPriority = ItemPriority.LowStock;
                                     else curPriority = ItemPriority.Low;
                                 }
                             }
@@ -136,7 +136,7 @@ namespace Combat_Realism
             bool allowDropRaw = Find.TickManager.TicksGame > pawn.mindState.lastInventoryRawFoodUseTick + ticksBeforeDropRaw;
             foreach (Thing thing in inventory.container)
             {
-                if(allowDropRaw || !thing.def.IsNutritionSource || thing.def.ingestible.preferability > FoodPreferability.Raw)
+                if(allowDropRaw || !thing.def.IsNutritionGivingIngestible || thing.def.ingestible.preferability > FoodPreferability.DesperateOnly)
                 {
                     LoadoutSlot slot = loadout.Slots.FirstOrDefault(x => x.Def == thing.def);
                     if (slot == null)
@@ -165,7 +165,7 @@ namespace Combat_Realism
             return false;
         }
 
-        protected override Job TryGiveTerminalJob(Pawn pawn)
+        protected override Job TryGiveJob(Pawn pawn)
         {
             // Get inventory
             CompInventory inventory = pawn.TryGetComp<CompInventory>();
@@ -222,7 +222,7 @@ namespace Combat_Realism
                 // Find excess items in inventory that are not part of our loadout
                 bool allowDropRaw = Find.TickManager.TicksGame > pawn.mindState.lastInventoryRawFoodUseTick + ticksBeforeDropRaw;
                 Thing thingToRemove = inventory.container.FirstOrDefault(t => 
-                    (allowDropRaw || !t.def.IsNutritionSource || t.def.ingestible.preferability > FoodPreferability.Raw) 
+                    (allowDropRaw || !t.def.IsNutritionGivingIngestible || t.def.ingestible.preferability > FoodPreferability.DesperateOnly) 
                     && !loadout.Slots.Any(s => s.Def == t.def));
                 if (thingToRemove != null)
                 {

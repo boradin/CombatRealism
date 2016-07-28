@@ -32,7 +32,8 @@ namespace Combat_Realism
             // Regular explosion stuff
             if(this.Props.explosionRadius > 0 && this.Props.explosionDamage > 0)
             {
-                Explosion explosion = (Explosion)GenSpawn.Spawn(ThingDefOf.Explosion, parent.Position);
+                Explosion explosion = new Explosion();
+                GenSpawn.Spawn(ThingDefOf.Mote_ExplosionFlash, parent.Position);
                 explosion.radius = Props.explosionRadius;
                 explosion.damType = Props.explosionDamageDef;
                 explosion.instigator = instigator;
@@ -43,7 +44,7 @@ namespace Combat_Realism
                 explosion.postExplosionSpawnThingDef = Props.postExplosionSpawnThingDef;
                 explosion.postExplosionSpawnChance = Props.explosionSpawnChance;
                 explosion.applyDamageToExplosionCellsNeighbors = Props.damageAdjacentTiles;
-                explosion.ExplosionStart(Props.soundExplode == null ? Props.explosionDamageDef.soundExplosion : Props.soundExplode);
+                explosion.StartExplosion(Props.soundExplode == null ? Props.explosionDamageDef.soundExplosion : Props.soundExplode);
             }
 
             // Fragmentation stuff

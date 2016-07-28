@@ -93,13 +93,13 @@ namespace Combat_Realism
             Text.Anchor = TextAnchor.LowerCenter;
             Widgets.Label( labelOutfitRect, "CurrentOutfit".Translate() );
             TooltipHandler.TipRegion( editOutfitRect, "CR.EditX".Translate( "CR.Outfits".Translate() ) );
-            if ( Widgets.ImageButton( editOutfitRect, _iconEdit ) )
+            if ( Widgets.ButtonImage( editOutfitRect, _iconEdit ) )
             {
                 Find.WindowStack.Add( new Dialog_ManageOutfits( null ) );
             }
             Widgets.Label( labelLoadoutRect, "CR.CurrentLoadout".Translate() );
             TooltipHandler.TipRegion( editLoadoutRect, "CR.EditX".Translate( "CR.Loadouts".Translate() ) );
-            if ( Widgets.ImageButton( editLoadoutRect, _iconEdit ) )
+            if ( Widgets.ButtonImage( editLoadoutRect, _iconEdit ) )
             {
                 Find.WindowStack.Add( new Dialog_ManageLoadouts( null ) );
             }
@@ -167,10 +167,10 @@ namespace Combat_Realism
 
             // OUTFITS
             // main button
-            if ( Widgets.TextButton( labelOutfitRect, p.outfits.CurrentOutfit.label, true, false ) )
+            if ( Widgets.ButtonText( labelOutfitRect, p.outfits.CurrentOutfit.label, true, false ) )
             {
                 List<FloatMenuOption> options = new List<FloatMenuOption>();
-                foreach ( Outfit outfit in Find.Map.outfitDatabase.AllOutfits )
+                foreach ( Outfit outfit in Current.Game.outfitDatabase.AllOutfits )
                 {
                     // need to create a local copy for delegate
                     Outfit localOutfit = outfit;
@@ -179,12 +179,12 @@ namespace Combat_Realism
                         p.outfits.CurrentOutfit = localOutfit;
                     }, MenuOptionPriority.Medium, null, null ) );
                 }
-                Find.WindowStack.Add( new FloatMenu( options, false ) );
+                Find.WindowStack.Add( new FloatMenu( options ) ); //FIXME
             }
 
             // edit button
             TooltipHandler.TipRegion( editOutfitRect, "CR.EditX".Translate( "CR.outfit".Translate() + " " + p.outfits.CurrentOutfit.label ) );
-            if ( Widgets.ImageButton( editOutfitRect, _iconEdit ) )
+            if ( Widgets.ButtonImage( editOutfitRect, _iconEdit ) )
             {
                 Find.WindowStack.Add( new Dialog_ManageOutfits( p.outfits.CurrentOutfit ) );
             }
@@ -193,7 +193,7 @@ namespace Combat_Realism
             if ( p.outfits.forcedHandler.SomethingIsForced )
             {
                 TooltipHandler.TipRegion( forcedOutfitRect, "ClearForcedApparel".Translate() );
-                if ( Widgets.ImageButton( forcedOutfitRect, _iconClearForced ) )
+                if ( Widgets.ButtonImage( forcedOutfitRect, _iconClearForced ) )
                 {
                     p.outfits.forcedHandler.Reset();
                 }
@@ -210,7 +210,7 @@ namespace Combat_Realism
 
             // LOADOUTS
             // main button
-            if ( Widgets.TextButton( labelLoadoutRect, p.GetLoadout().LabelCap, true, false ) )
+            if ( Widgets.ButtonText( labelLoadoutRect, p.GetLoadout().LabelCap, true, false ) )
             {
                 List<FloatMenuOption> options = new List<FloatMenuOption>();
                 foreach ( Loadout loadout in LoadoutManager.Loadouts )
@@ -222,12 +222,12 @@ namespace Combat_Realism
                         p.SetLoadout( localLoadout );
                     }, MenuOptionPriority.Medium, null, null ) );
                 }
-                Find.WindowStack.Add( new FloatMenu( options, false ) );
+                Find.WindowStack.Add( new FloatMenu( options ) );
             }
 
             // edit button
             TooltipHandler.TipRegion( editLoadoutRect, "CR.EditX".Translate( "CR.loadout".Translate() + " " +  p.GetLoadout().LabelCap ) );
-            if ( Widgets.ImageButton( editLoadoutRect, _iconEdit ) )
+            if ( Widgets.ButtonImage( editLoadoutRect, _iconEdit ) )
             {
                 Find.WindowStack.Add( new Dialog_ManageLoadouts( p.GetLoadout() ) );
             }

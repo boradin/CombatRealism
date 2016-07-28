@@ -165,11 +165,11 @@ namespace Combat_Realism
 
                 if (lightingShift > 0)
                 {
-                    stringBuilder.AppendLine("      " + "Darkness".Translate() + "\t" + GenText.AsPercent(lightingShift));
+                    stringBuilder.AppendLine("      " + "Darkness".Translate() + "\t" + GenText.ToStringPercent(lightingShift));
                 }
                 if (weatherShift > 0)
                 {
-                    stringBuilder.AppendLine("      " + "Weather".Translate() + "\t" + GenText.AsPercent(weatherShift));
+                    stringBuilder.AppendLine("      " + "Weather".Translate() + "\t" + GenText.ToStringPercent(weatherShift));
                 }
             }
             if (leadShift > 0)

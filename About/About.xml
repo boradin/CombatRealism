@@ -3,9 +3,10 @@
 	<name>Combat Realism Core</name>
 	<author>NoImageAvailable</author>
 	<url>https://ludeon.com/forums/index.php?topic=9759.0</url>
-	<targetVersion>Alpha 13</targetVersion>
-	<description>Version: 1.6.5
+	<targetVersion>0.14.1241</targetVersion>
+	<description>Version: 1.7.0
 	
 An extensive overhaul of the game's combat to make it more realistic.
+Ported to Alpha 14 by boradin.
 	</description>
 </ModMetaData>

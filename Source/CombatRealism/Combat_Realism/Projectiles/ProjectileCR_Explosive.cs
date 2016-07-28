@@ -48,6 +48,7 @@ namespace Combat_Realism
                 this.equipmentDef,
                 this.def.projectile.postExplosionSpawnThingDef,
                 this.def.projectile.explosionSpawnChance,
+                1, //FIXME
                 propsCR == null ? false : propsCR.damageAdjacentTiles,
                 preExplosionSpawnThingDef,
                 this.def.projectile.explosionSpawnChance);
