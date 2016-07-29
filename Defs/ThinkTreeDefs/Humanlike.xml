@@ -4,24 +4,24 @@
 	<ThinkTreeDef>
 		<defName>Humanlike</defName>
 		<thinkRoot Class="ThinkNode_Priority">
-			<subNodes>
-        <!-- Do something while lying down -->
-				<li Class="ThinkNode_ConditionalLyingDown">
-          <subNodes>
-            <li Class="ThinkNode_ChancePerHour_Lovin">
-              <subNodes>
-                <li Class="JobGiver_DoLovin" />
-              </subNodes>
-            </li>
-            <li Class="JobGiver_GetJoyWhileLyingDown" />
-          </subNodes>
-        </li>
+		  <subNodes>
+			<!-- Do something while lying down -->
+			<li Class="ThinkNode_ConditionalLyingDown">
+				<subNodes>
+					<li Class="ThinkNode_ChancePerHour_Lovin">
+						<subNodes>
+							<li Class="JobGiver_DoLovin" />
+						</subNodes>
+					</li>
+					<li Class="JobGiver_GetJoyInBed" />
+				</subNodes>
+			</li>
             
         <!-- Keep lying down if we have to -->
 				<li Class="ThinkNode_ConditionalMustKeepLyingDown">
 					<subNodes>
             <li Class="JobGiver_KeepLyingDown" />
-          </subNodes>
+				</subNodes>
         </li>
       
         <li Class="ThinkNode_Subtree">
@@ -85,9 +85,7 @@
             </li>
             <li Class="ThinkNode_ConditionalReleased">
               <subNodes>
-                <li Class="JobGiver_ExitMapNearest">
-                  <locomotion>Walk</locomotion>
-                </li>
+                <li Class="JobGiver_ExitMapBest" />
               </subNodes>
             </li>
             <li Class="JobGiver_WanderCurrentRoom">
@@ -209,9 +207,7 @@
             <li Class="ThinkNode_ConditionalNeutralFaction">
               <subNodes>
                 <li Class="JobGiver_PatientGoToBed" />
-                <li Class="JobGiver_ExitMapNearest">
-                  <locomotion>Walk</locomotion>
-                </li>
+                <li Class="JobGiver_ExitMapBest" />
               </subNodes>
             </li>
           </subNodes>

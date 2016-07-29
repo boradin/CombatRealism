@@ -3,7 +3,7 @@
   
 	<ThingDef ParentName="BuildingBase">
 		<defName>WindTurbine</defName>
-    <thingClass>Building_WindTurbine</thingClass>
+    <thingClass>CompPowerPlantWind</thingClass>
 		<label>wind turbine</label>
 		<description>A wind-powered electrical generator. Requires a large clear space in front and behind for optimal air flow.</description>
     <graphicData>
@@ -17,7 +17,7 @@
         <rect>(2,0.15,1,1.4)</rect>
       </damageData>
     </graphicData>
-    <altitudeLayer>BuildingTall</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
 		<fillPercent>0.5</fillPercent>
 		<statBases>

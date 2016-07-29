@@ -61,7 +61,7 @@
       <min>0.2</min>
       <max>0.9</max>
     </gearHealthRange>
-    <invMealCount>3</invMealCount>
+    <invNutrition>3</invNutrition>
     <itemQuality>Poor</itemQuality>
     <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
     <apparelMoney>
@@ -102,7 +102,7 @@
     <defaultFactionType>Pirate</defaultFactionType>
     <baseRecruitDifficulty>60</baseRecruitDifficulty>
     <backstoryCategory>Raider</backstoryCategory>
-    <invMealCount>3</invMealCount>
+    <invNutrition>3</invNutrition>
     <itemQuality>Poor</itemQuality>
     <backstoryCryptosleepCommonality>0.2</backstoryCryptosleepCommonality>
     <maxGenerationAge>48</maxGenerationAge>
@@ -150,7 +150,7 @@
     <defaultFactionType>Pirate</defaultFactionType>
     <baseRecruitDifficulty>70</baseRecruitDifficulty>
     <backstoryCategory>Raider</backstoryCategory>
-    <invMealCount>3</invMealCount>
+    <invNutrition>3</invNutrition>
     <backstoryCryptosleepCommonality>0.2</backstoryCryptosleepCommonality>
     <maxGenerationAge>50</maxGenerationAge>
     <factionLeader>true</factionLeader>

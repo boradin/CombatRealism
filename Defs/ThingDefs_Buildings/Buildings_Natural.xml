@@ -42,7 +42,7 @@
         <li>MapEdge</li>
       </linkFlags>
     </graphicData>
-    <altitudeLayer>BuildingTall</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1</fillPercent>
@@ -114,10 +114,10 @@
       <mineableThing>Steel</mineableThing>
       <mineableYield>35</mineableYield>
       <mineableScatterCommonality>1</mineableScatterCommonality>
-      <mineableScatterBlotchSizeRange>
+      <mineableScatterLumpSizeRange>
         <min>20</min>
         <max>40</max>
-      </mineableScatterBlotchSizeRange>
+      </mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -140,10 +140,10 @@
       <mineableThing>Silver</mineableThing>
       <mineableYield>35</mineableYield>
       <mineableScatterCommonality>0.10</mineableScatterCommonality>
-      <mineableScatterBlotchSizeRange>
+      <mineableScatterLumpSizeRange>
         <min>4</min>
         <max>12</max>
-      </mineableScatterBlotchSizeRange>
+      </mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -167,10 +167,10 @@
       <mineableThing>Gold</mineableThing>
       <mineableYield>35</mineableYield>
       <mineableScatterCommonality>0.07</mineableScatterCommonality>
-      <mineableScatterBlotchSizeRange>
+      <mineableScatterLumpSizeRange>
         <min>1</min>
         <max>6</max>
-      </mineableScatterBlotchSizeRange>
+      </mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -194,10 +194,10 @@
       <mineableThing>Uranium</mineableThing>
       <mineableYield>35</mineableYield>
       <mineableScatterCommonality>0.07</mineableScatterCommonality>
-      <mineableScatterBlotchSizeRange>
+      <mineableScatterLumpSizeRange>
         <min>1</min>
         <max>6</max>
-      </mineableScatterBlotchSizeRange>
+      </mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -222,10 +222,10 @@
       <mineableThing>Plasteel</mineableThing>
       <mineableYield>35</mineableYield>
       <mineableScatterCommonality>0.05</mineableScatterCommonality>
-      <mineableScatterBlotchSizeRange>
+      <mineableScatterLumpSizeRange>
         <min>10</min>
         <max>50</max>
-      </mineableScatterBlotchSizeRange>
+      </mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
 
@@ -249,10 +249,10 @@
       <mineableThing>Jade</mineableThing>
       <mineableYield>35</mineableYield>
       <mineableScatterCommonality>0.065</mineableScatterCommonality>
-      <mineableScatterBlotchSizeRange>
+      <mineableScatterLumpSizeRange>
         <min>1</min>
         <max>6</max>
-      </mineableScatterBlotchSizeRange>
+      </mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
   
@@ -274,10 +274,10 @@
       <mineableThing>Components</mineableThing>
       <mineableYield>2</mineableYield>
       <mineableScatterCommonality>1.00</mineableScatterCommonality> <!-- as often as steel, with smaller blotches -->
-      <mineableScatterBlotchSizeRange>
+      <mineableScatterLumpSizeRange>
         <min>3</min>
         <max>6</max>
-      </mineableScatterBlotchSizeRange>
+      </mineableScatterLumpSizeRange>
     </building>
   </ThingDef>
   
@@ -287,7 +287,7 @@
     <category>Ethereal</category>
     <label>steam geyser</label>
     <defName>SteamGeyser</defName>
-    <thingClass>SteamGeyser</thingClass>
+    <thingClass>Building_SteamGeyser</thingClass>
     <graphicData>
       <texPath>Things/Building/Natural/SteamGeyser</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -315,7 +315,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.6</drawSize>
     </graphicData>
-    <altitudeLayer>BuildingTall</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <rotatable>false</rotatable>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
@@ -328,7 +328,7 @@
       <li Class="CompProperties_Spawner">
         <thingToSpawn>InsectJelly</thingToSpawn>
         <spawnCount>20</spawnCount>
-        <spawnInterval>26000</spawnInterval>
+        <spawnIntervalRange><min>26000</min><max>26000</max></spawnIntervalRange>
         <spawnMaxAdjacent>100</spawnMaxAdjacent>
         <spawnForbidden>true</spawnForbidden>
       </li>

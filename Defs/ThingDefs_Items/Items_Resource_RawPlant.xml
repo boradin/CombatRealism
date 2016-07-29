@@ -18,7 +18,7 @@
 
   <ThingDef Abstract="True" Name="PlantFoodRawBase" ParentName="OrganicProductBase">
     <ingestible>
-      <preferability>Raw</preferability>
+      <preferability>RawBad</preferability>
       <nutrition>0.05</nutrition>
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>RawVegetable_Eat</soundEat>
@@ -35,7 +35,7 @@
     <description>Nutrient-rich grasses and shoots, harvested and compacted for storage. Hay is good animal feed, but inedible for humans.</description>
     <stackLimit>200</stackLimit>
     <ingestible>
-      <foodType>Plant, AnimalKibble</foodType>
+      <foodType>Plant, Kibble</foodType>
     </ingestible>
     <graphicData>
       <texPath>Things/Item/Resource/PlantFoodRaw/Hay</texPath>
@@ -55,7 +55,7 @@
   <ThingDef ParentName="OrganicProductBase">
     <defName>RawHops</defName>
     <label>hops</label>
-    <description>Raw hops. A flavoring and preserving agent that is necessary for making beer.</description>
+    <description>RawBad hops. A flavoring and preserving agent that is necessary for making beer.</description>
     <graphicData>
       <texPath>Things/Item/Resource/PlantFoodRaw/Hops</texPath>
     </graphicData>
@@ -76,7 +76,7 @@
   <ThingDef ParentName="PlantFoodRawBase">
     <defName>RawPotatoes</defName>
     <label>potatoes</label>
-    <description>Raw potatoes.</description>
+    <description>RawBad potatoes.</description>
     <graphicData>
       <texPath>Things/Item/Resource/PlantFoodRaw/Potatoes</texPath>
     </graphicData>
@@ -85,7 +85,7 @@
     </statBases>
     <ingestible>
       <foodType>VegetableOrFruit</foodType>
-      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <specialThoughtDirect>AteRawFood</specialThoughtDirect>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -97,7 +97,7 @@
   <ThingDef ParentName="PlantFoodRawBase">
     <defName>RawCorn</defName>
     <label>corn</label>
-    <description>Raw corn. Nice to eat, even when raw.</description>
+    <description>RawBad corn. Nice to eat, even when raw.</description>
     <soundInteract>Grain_Drop</soundInteract>
     <soundDrop>Grain_Drop</soundDrop>
     <graphicData>
@@ -119,7 +119,7 @@
   <ThingDef ParentName="PlantFoodRawBase">
     <defName>RawRice</defName>
     <label>rice</label>
-    <description>Raw rice.</description>
+    <description>RawBad rice.</description>
     <soundInteract>Grain_Drop</soundInteract>
     <soundDrop>Grain_Drop</soundDrop>
     <graphicData>
@@ -130,7 +130,7 @@
     </statBases>
     <ingestible>
       <foodType>Seeds</foodType>
-      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <specialThoughtDirect>AteRawFood</specialThoughtDirect>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -163,7 +163,7 @@
   <ThingDef ParentName="PlantFoodRawBase">
     <defName>RawAgave</defName>
     <label>agave fruit</label>
-    <description>Raw agave fruit.</description>
+    <description>RawBad agave fruit.</description>
     <graphicData>
       <texPath>Things/Item/Resource/PlantFoodRaw/AgaveFruit</texPath>
     </graphicData>
@@ -172,7 +172,7 @@
     </statBases>
     <ingestible>
       <foodType>VegetableOrFruit</foodType>
-      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <specialThoughtDirect>AteRawFood</specialThoughtDirect>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">

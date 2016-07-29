@@ -18,7 +18,7 @@
       <texPath>Things/Building/Linked/Sandbags_Blueprint_Atlas</texPath>
     </blueprintGraphicData>
     <uiIconPath>Things/Building/Linked/Sandbags_MenuIcon</uiIconPath>
-    <altitudeLayer>Waist</altitudeLayer>
+    <altitudeLayer>MoteLow</altitudeLayer>
     <pathCost>40</pathCost>
     <passability>PassThroughOnly</passability>
     <castEdgeShadows>true</castEdgeShadows>
@@ -65,7 +65,7 @@
       </damageData>
     </graphicData>
 		<tradeability>Stockable</tradeability>
-    <altitudeLayer>Waist</altitudeLayer>
+    <altitudeLayer>MoteLow</altitudeLayer>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
@@ -146,7 +146,7 @@
         <cornerTL>Damage/Corner</cornerTL>
       </damageData>
     </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
+    <altitudeLayer>MoteLow</altitudeLayer>
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <statBases>
@@ -247,7 +247,7 @@
         <rect>(0,0,1,0.15)</rect>
       </damageData>
     </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
+    <altitudeLayer>MoteLow</altitudeLayer>
     <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
     <tickerType>Normal</tickerType>
@@ -291,7 +291,7 @@
         <rect>(0.1,0,0.8,0.3)</rect>
       </damageData>
     </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
+    <altitudeLayer>MoteLow</altitudeLayer>
     <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
     <tickerType>Normal</tickerType>
@@ -338,7 +338,7 @@
         <rect>(0.1,0,0.8,0.3)</rect>
       </damageData>
     </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
+    <altitudeLayer>MoteLow</altitudeLayer>
     <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
     <tickerType>Normal</tickerType>

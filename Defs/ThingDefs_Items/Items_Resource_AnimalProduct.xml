@@ -17,12 +17,12 @@
       <MarketValue>2.1</MarketValue>
     </statBases>
     <ingestible>
-      <foodType>AnimalKibble</foodType>
-      <preferability>Raw</preferability>
+      <foodType>Kibble</foodType>
+      <preferability>RawTasty</preferability>
       <nutrition>0.05</nutrition>
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>RawVegetable_Eat</soundEat>
-      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <specialThoughtDirect>AteRawFood</specialThoughtDirect>
     </ingestible>
   </ThingDef>
 
@@ -59,13 +59,13 @@
       <nutrition>0.25</nutrition>
       <eatEffect>EatMeat</eatEffect>
       <soundEat>RawMeat_Eat</soundEat>
-      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <specialThoughtDirect>AteRawFood</specialThoughtDirect>
     </ingestible>
   </ThingDef>
 
   <ThingDef Abstract="True" Name="EggUnfertBase" ParentName="EggBase" >
     <ingestible>
-      <preferability>Raw</preferability>
+      <preferability>RawTasty</preferability>
     </ingestible>
     <thingCategories>
       <li>EggsUnfertilized</li>
@@ -199,7 +199,7 @@
     </statBases>
     <ingestible>
       <foodType>AnimalProduct</foodType>
-      <preferability>Fine</preferability>
+      <preferability>MealFine</preferability>
       <nutrition>0.05</nutrition>
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>Meal_Eat</soundEat>

@@ -9,7 +9,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>SolarGenerator</defName>
     <label>solar generator</label>
-    <thingClass>Building_PowerPlantSolar</thingClass>
+    <thingClass>CompPowerPlantSolar</thingClass>
     <graphicData>
       <texPath>Things/Building/Power/SolarCollector</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -18,7 +18,7 @@
         <rect>(0,0.6,4,2.8)</rect>
       </damageData>
     </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
+    <altitudeLayer>MoteLow</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
     <fillPercent>0.5</fillPercent>
@@ -57,7 +57,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>GeothermalGenerator</defName>
     <label>geothermal generator</label>
-    <thingClass>Building_PowerPlantSteam</thingClass>
+    <thingClass>CompPowerPlantSteam</thingClass>
     <graphicData>
       <texPath>Things/Building/Power/GeothermalPlant</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -66,7 +66,7 @@
         <rect>(0.3,0,5.4,6)</rect>
       </damageData>
     </graphicData>
-    <altitudeLayer>BuildingTall</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1</fillPercent>
@@ -112,13 +112,13 @@
   <ThingDef ParentName="BuildingBase">
     <defName>FueledGenerator</defName>
     <label>fueled generator</label>
-    <thingClass>Building_PowerPlant</thingClass>
+    <thingClass>CompPowerPlant</thingClass>
     <graphicData>
       <texPath>Things/Building/Power/FueledGenerator</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
-    <altitudeLayer>BuildingTall</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
     <pathCost>150</pathCost>
     <fillPercent>1.0</fillPercent>
@@ -187,7 +187,7 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-    <altitudeLayer>BuildingTall</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
     <castEdgeShadows>true</castEdgeShadows>

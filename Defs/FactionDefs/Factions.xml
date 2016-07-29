@@ -101,7 +101,7 @@
       <max>40</max>
     </startingGoodwill>
 		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
-		<techLevel>Midworld</techLevel>
+		<techLevel>Industrial</techLevel>
 		<backstoryCategory>Civil</backstoryCategory>
 		<hairTags>
 			<li>Rural</li>

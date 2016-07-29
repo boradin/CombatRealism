@@ -3,7 +3,7 @@
 
   <ThingDef Name="MealBase" Abstract="True">
     <label>meal</label>
-    <thingClass>Meal</thingClass>
+    <thingClass>ThingWithComps</thingClass>
     <category>Item</category>
     <useHitPoints>true</useHitPoints>
     <selectable>true</selectable>
@@ -63,7 +63,7 @@
       <MarketValue>30</MarketValue>
     </statBases>
     <ingestible>
-      <preferability>Fine</preferability>
+      <preferability>MealFine</preferability>
       <nutrition>0.90</nutrition>
       <joy>0.02</joy>
       <eatEffect>EatVegetarian</eatEffect>
@@ -85,10 +85,10 @@
       <MarketValue>15</MarketValue>
     </statBases>
     <ingestible>
-      <preferability>Awful</preferability>
+      <preferability>MealAwful</preferability>
       <nutrition>0.90</nutrition>
       <joy>-0.04</joy>
-      <ingestedDirectThought>AteNutrientPasteMeal</ingestedDirectThought>
+      <specialThoughtDirect>AteNutrientPasteMeal</specialThoughtDirect>
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>Meal_Eat</soundEat>
     </ingestible>
@@ -109,7 +109,7 @@
       <WorkToMake>300</WorkToMake>
     </statBases>
     <ingestible>
-      <preferability>Simple</preferability>
+      <preferability>MealSimple</preferability>
       <nutrition>0.85</nutrition>
       <joy>0.02</joy>
       <eatEffect>EatVegetarian</eatEffect>
@@ -123,7 +123,7 @@
     <label>fine meal</label>
     <description>A complex dish assembled with care from a wide selection of ingredients.</description>
     <graphicData>
-      <texPath>Things/Item/Meal/Fine</texPath>
+      <texPath>Things/Item/Meal/MealFine</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
@@ -132,10 +132,10 @@
       <WorkToMake>450</WorkToMake>
     </statBases>
     <ingestible>
-      <preferability>Fine</preferability>
+      <preferability>MealFine</preferability>
       <nutrition>0.90</nutrition>
       <joy>0.045</joy>
-      <ingestedDirectThought>AteFineMeal</ingestedDirectThought>
+      <specialThoughtDirect>AteMealFineMeal</specialThoughtDirect>
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>Meal_Eat</soundEat>
     </ingestible>
@@ -147,7 +147,7 @@
     <label>lavish meal</label>
     <description>A masterpiece of the culinary arts, this meal nourishes the body, mind, and soul.</description>
     <graphicData>
-      <texPath>Things/Item/Meal/Lavish</texPath>
+      <texPath>Things/Item/Meal/MealLavish</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
@@ -156,10 +156,10 @@
       <WorkToMake>800</WorkToMake>
     </statBases>
     <ingestible>
-      <preferability>Lavish</preferability>
+      <preferability>MealLavish</preferability>
       <nutrition>1.00</nutrition>
       <joy>0.065</joy>
-      <ingestedDirectThought>AteLavishMeal</ingestedDirectThought>
+      <specialThoughtDirect>AteMealLavishMeal</specialThoughtDirect>
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>Meal_Eat</soundEat>
     </ingestible>
