@@ -79,7 +79,7 @@ namespace Combat_Realism.Detours
             return true;
         }
 
-        internal static bool TryDrop(this ThingContainer _this, Thing thing, IntVec3 dropLoc, ThingPlaceMode mode, int count, out Thing resultingThing)
+        internal static bool TryDrop(this ThingContainer _this, Thing thing, IntVec3 dropLoc, ThingPlaceMode mode, int count, out Thing resultingThing, Action<Thing, int> placedAction = null)
         {
             if (thing.stackCount < count)
             {
