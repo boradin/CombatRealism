@@ -18,7 +18,7 @@
     </statBases>
     <ingestible>
       <foodType>Kibble</foodType>
-      <preferability>RawTasty</preferability>
+      <preferability>RawBad</preferability>
       <nutrition>0.05</nutrition>
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>RawVegetable_Eat</soundEat>
@@ -65,7 +65,7 @@
 
   <ThingDef Abstract="True" Name="EggUnfertBase" ParentName="EggBase" >
     <ingestible>
-      <preferability>RawTasty</preferability>
+      <preferability>RawBad</preferability>
     </ingestible>
     <thingCategories>
       <li>EggsUnfertilized</li>

@@ -123,7 +123,7 @@
     <label>fine meal</label>
     <description>A complex dish assembled with care from a wide selection of ingredients.</description>
     <graphicData>
-      <texPath>Things/Item/Meal/MealFine</texPath>
+      <texPath>Things/Item/Meal/Fine</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
@@ -135,7 +135,7 @@
       <preferability>MealFine</preferability>
       <nutrition>0.90</nutrition>
       <joy>0.045</joy>
-      <specialThoughtDirect>AteMealFineMeal</specialThoughtDirect>
+      <specialThoughtDirect>AteFineMeal</specialThoughtDirect>
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>Meal_Eat</soundEat>
     </ingestible>
@@ -147,7 +147,7 @@
     <label>lavish meal</label>
     <description>A masterpiece of the culinary arts, this meal nourishes the body, mind, and soul.</description>
     <graphicData>
-      <texPath>Things/Item/Meal/MealLavish</texPath>
+      <texPath>Things/Item/Meal/Lavish</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
@@ -159,7 +159,7 @@
       <preferability>MealLavish</preferability>
       <nutrition>1.00</nutrition>
       <joy>0.065</joy>
-      <specialThoughtDirect>AteMealLavishMeal</specialThoughtDirect>
+      <specialThoughtDirect>AteLavishMeal</specialThoughtDirect>
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>Meal_Eat</soundEat>
     </ingestible>
