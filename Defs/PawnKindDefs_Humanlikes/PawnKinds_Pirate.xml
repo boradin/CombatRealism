@@ -9,7 +9,7 @@
     <race>Human</race>
     <combatPower>25</combatPower>
     <defaultFactionType>Pirate</defaultFactionType>
-    <baseRecruitDifficulty>50</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.5</baseRecruitDifficulty>
     <backstoryCategory>Raider</backstoryCategory>
     <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
     <gearHealthRange>
@@ -55,7 +55,7 @@
     <race>Human</race>
     <combatPower>38</combatPower>
     <defaultFactionType>Pirate</defaultFactionType>
-    <baseRecruitDifficulty>60</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.6</baseRecruitDifficulty>
     <backstoryCategory>Raider</backstoryCategory>
     <gearHealthRange>
       <min>0.2</min>
@@ -100,7 +100,7 @@
     <race>Human</race>
     <combatPower>36</combatPower>
     <defaultFactionType>Pirate</defaultFactionType>
-    <baseRecruitDifficulty>60</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.6</baseRecruitDifficulty>
     <backstoryCategory>Raider</backstoryCategory>
     <invNutrition>3</invNutrition>
     <itemQuality>Poor</itemQuality>
@@ -148,7 +148,7 @@
     <race>Human</race>
     <combatPower>56</combatPower>
     <defaultFactionType>Pirate</defaultFactionType>
-    <baseRecruitDifficulty>70</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.7</baseRecruitDifficulty>
     <backstoryCategory>Raider</backstoryCategory>
     <invNutrition>3</invNutrition>
     <backstoryCryptosleepCommonality>0.2</backstoryCryptosleepCommonality>

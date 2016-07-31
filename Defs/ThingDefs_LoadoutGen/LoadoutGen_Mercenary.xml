@@ -74,7 +74,7 @@
 	  <tag>CR_SMG</tag>
 	  <baseMoney>
 	    <min>0</min>
-		<max>1000</max>
+      <max>1000</max>
 	  </baseMoney>
 	  <minCount>1</minCount>
 	  <maxCount>1</maxCount>

@@ -7,7 +7,7 @@
 		<race>Human</race>
     <combatPower>38</combatPower>
     <defaultFactionType>Tribe</defaultFactionType>
-		<baseRecruitDifficulty>90</baseRecruitDifficulty>
+		<baseRecruitDifficulty>0.9</baseRecruitDifficulty>
 		<backstoryCategory>Tribal</backstoryCategory>
     <invNutrition>3</invNutrition>
     <backstoryCryptosleepCommonality>0.01</backstoryCryptosleepCommonality>
@@ -38,7 +38,7 @@
 		<race>Human</race>
     <combatPower>48</combatPower>
     <defaultFactionType>Tribe</defaultFactionType>
-		<baseRecruitDifficulty>90</baseRecruitDifficulty>
+		<baseRecruitDifficulty>0.9</baseRecruitDifficulty>
 		<backstoryCategory>Tribal</backstoryCategory>
     <invNutrition>3</invNutrition>
     <backstoryCryptosleepCommonality>0.01</backstoryCryptosleepCommonality>
@@ -91,7 +91,7 @@
 		<race>Human</race>
     <combatPower>70</combatPower>
     <defaultFactionType>Tribe</defaultFactionType>
-		<baseRecruitDifficulty>95</baseRecruitDifficulty>
+		<baseRecruitDifficulty>0.95</baseRecruitDifficulty>
 		<backstoryCategory>Tribal</backstoryCategory>
     <invNutrition>3</invNutrition>
     <itemQuality>Superior</itemQuality>

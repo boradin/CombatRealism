@@ -8,7 +8,7 @@
     <race>Human</race>
     <combatPower>80</combatPower>
     <defaultFactionType>Pirate</defaultFactionType>
-    <baseRecruitDifficulty>80</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.8</baseRecruitDifficulty>
     <backstoryCategory>Raider</backstoryCategory>
     <invNutrition>3</invNutrition>
     <itemQuality>Normal</itemQuality>
@@ -55,7 +55,7 @@
     <race>Human</race>
     <combatPower>90</combatPower>
     <defaultFactionType>Pirate</defaultFactionType>
-    <baseRecruitDifficulty>70</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.7</baseRecruitDifficulty>
     <backstoryCategory>Raider</backstoryCategory>
     <invNutrition>3</invNutrition>
     <itemQuality>Normal</itemQuality>
@@ -105,7 +105,7 @@
     <combatPower>135</combatPower>
     <race>Human</race>
     <defaultFactionType>Pirate</defaultFactionType>
-    <baseRecruitDifficulty>80</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.8</baseRecruitDifficulty>
     <backstoryCategory>Raider</backstoryCategory>
     <invNutrition>3</invNutrition>
     <backstoryCryptosleepCommonality>0.25</backstoryCryptosleepCommonality>
@@ -155,7 +155,7 @@
       <li>GunHeavy</li>
     </weaponTags>
     <defaultFactionType>Pirate</defaultFactionType>
-    <baseRecruitDifficulty>80</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.8</baseRecruitDifficulty>
     <backstoryCategory>Raider</backstoryCategory>
     <invNutrition>3</invNutrition>
     <backstoryCryptosleepCommonality>0.25</backstoryCryptosleepCommonality>
@@ -198,7 +198,7 @@
   <PawnKindDef Abstract="True" Name="EliteBase" >
     <race>Human</race>
     <defaultFactionType>Pirate</defaultFactionType>
-    <baseRecruitDifficulty>70</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.7</baseRecruitDifficulty>
     <backstoryCategory>Raider</backstoryCategory>
     <itemQuality>Normal</itemQuality>
     <backstoryCryptosleepCommonality>0.25</backstoryCryptosleepCommonality>

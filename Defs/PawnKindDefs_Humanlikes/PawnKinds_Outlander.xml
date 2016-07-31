@@ -6,7 +6,7 @@
     <label>villager</label>
     <race>Human</race>
     <combatPower>25</combatPower>
-    <baseRecruitDifficulty>60</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.6</baseRecruitDifficulty>
     <backstoryCategory>Civil</backstoryCategory>
     <defaultFactionType>Outlander</defaultFactionType>
     <itemQuality>Poor</itemQuality>
@@ -68,7 +68,7 @@
     <race>Human</race>
     <combatPower>50</combatPower>
     <defaultFactionType>Outlander</defaultFactionType>
-    <baseRecruitDifficulty>60</baseRecruitDifficulty>
+    <baseRecruitDifficulty>0.6</baseRecruitDifficulty>
     <backstoryCategory>Raider</backstoryCategory>
     <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
     <maxGenerationAge>58</maxGenerationAge>
