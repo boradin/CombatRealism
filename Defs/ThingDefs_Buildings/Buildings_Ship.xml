@@ -20,6 +20,7 @@
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
+    <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1</fillPercent>
     <blockLight>true</blockLight>
@@ -49,13 +50,14 @@
     <costList>
       <Steel>200</Steel>
       <Plasteel>150</Plasteel>
-      <Components>2</Components>
+      <Component>2</Component>
     </costList>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>
     <researchPrerequisites>
       <li>ShipBasics</li>
     </researchPrerequisites>
+    <designationHotkey>Misc1</designationHotkey>
   </ThingDef>
 
 
@@ -79,6 +81,7 @@
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
+    <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>0.5</fillPercent>
     <statBases>
@@ -114,10 +117,11 @@
     </building>
     <costList>
       <Steel>500</Steel>
-      <Components>4</Components>
+      <Component>4</Component>
     </costList>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <designationHotkey>Misc2</designationHotkey>
   </ThingDef>
 
 
@@ -135,6 +139,7 @@
     <researchPrerequisites><li>ShipComputerCore</li></researchPrerequisites>
     <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
+    <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1</fillPercent>
     <blockLight>true</blockLight>
@@ -163,11 +168,12 @@
     </building>
     <costList>
       <Steel>800</Steel>
-      <Components>5</Components>
+      <Component>5</Component>
       <AIPersonaCore>1</AIPersonaCore>
     </costList>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <designationHotkey>Misc3</designationHotkey>
   </ThingDef>
 
 
@@ -193,6 +199,7 @@
     <researchPrerequisites><li>ShipReactor</li></researchPrerequisites>
     <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
+    <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1</fillPercent>
     <blockLight>true</blockLight>
@@ -212,11 +219,11 @@
     <costList>
       <Steel>500</Steel>
       <Plasteel>500</Plasteel>
-      <Components>10</Components>
+      <Component>10</Component>
     </costList>
     <comps>
       <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
+        <compClass>CompPowerPlant</compClass>
         <basePowerConsumption>-1000</basePowerConsumption>
         <transmitsPower>true</transmitsPower>
       </li>
@@ -227,6 +234,7 @@
     </placeWorkers>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <designationHotkey>Misc4</designationHotkey>
   </ThingDef>
 
 
@@ -244,6 +252,7 @@
     <researchPrerequisites><li>ShipEngine</li></researchPrerequisites>
     <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
+    <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1</fillPercent>
     <blockLight>true</blockLight>
@@ -273,10 +282,11 @@
     <costList>
       <Steel>400</Steel>
       <Plasteel>200</Plasteel>
-      <Components>6</Components>
+      <Component>6</Component>
     </costList>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <designationHotkey>Misc5</designationHotkey>
   </ThingDef>
 
 

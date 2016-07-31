@@ -5,21 +5,24 @@
 		<defName>Humanlike</defName>
 		<thinkRoot Class="ThinkNode_Priority">
 		  <subNodes>
-			<!-- Do something while lying down -->
+			<!-- Do lovin' -->
 			<li Class="ThinkNode_ConditionalLyingDown">
-				<subNodes>
-					<li Class="ThinkNode_ChancePerHour_Lovin">
-						<subNodes>
-							<li Class="JobGiver_DoLovin" />
-						</subNodes>
-					</li>
-					<li Class="JobGiver_GetJoyInBed" />
-				</subNodes>
-			</li>
+			<subNodes>
+				<li Class="ThinkNode_ChancePerHour_Lovin">
+				  <subNodes>
+					<li Class="JobGiver_DoLovin" />
+				  </subNodes>
+				</li>
+			</subNodes>
+        </li>
             
         <!-- Keep lying down if we have to -->
 				<li Class="ThinkNode_ConditionalMustKeepLyingDown">
 					<subNodes>
+						<!-- Get joy -->
+						<li Class="JobGiver_GetJoyInBed" />
+						
+						<!-- Keep lying down -->
 						<li Class="JobGiver_KeepLyingDown" />
 					</subNodes>
 				</li>
@@ -80,12 +83,18 @@
               <subNodes>
                 <li Class="JobGiver_GetFood"/>
                 <li Class="JobGiver_GetRest"/>
-                <li Class="JobGiver_GetJoy"/>
+                <li Class="ThinkNode_Priority_GetJoy">
+					<subNodes>
+						<li Class="JobGiver_GetJoy"/>
+					</subNodes>
+				</li>
               </subNodes>
             </li>
             <li Class="ThinkNode_ConditionalReleased">
               <subNodes>
-                <li Class="JobGiver_ExitMapBest" />
+                <li Class="JobGiver_ExitMapBest">
+                  <defaultLocomotion>Walk</defaultLocomotion>
+                </li>
               </subNodes>
             </li>
             <li Class="JobGiver_WanderCurrentRoom">
@@ -143,8 +152,7 @@
             </li>
 
             <!-- Pack food if not hungry-->
-						<!--
-            <li Class="ThinkNode_ConditionalNeedPercentageAbove">
+			<li Class="ThinkNode_ConditionalNeedPercentageAbove">
               <need>Food</need>
               <threshold>0.6</threshold>
               <subNodes>
@@ -153,7 +161,6 @@
                 </li>
               </subNodes>
             </li>
-						-->
 					</subNodes>
 				</li>
 
@@ -173,7 +180,12 @@
 							<subNodes>
 								<li Class="JobGiver_GetFood"/>
 								<li Class="JobGiver_GetRest"/>
-								<li Class="JobGiver_GetJoy"/>
+								<li Class="ThinkNode_Priority_GetJoy">
+								  <subNodes>
+									<li Class="JobGiver_GetJoyInBed"/>
+									<li Class="JobGiver_GetJoy"/>
+								  </subNodes>
+								</li>
 								<li Class="JobGiver_Work"/>
 								<li Class="Combat_Realism.JobGiver_UpdateLoadout"/>
 							</subNodes>
@@ -192,6 +204,17 @@
             <li Class="ThinkNode_Tagger">
               <tagToGive>Idle</tagToGive>
               <subNodes>
+                <!-- Do random joy activity -->
+                <li Class="ThinkNode_ConditionalNeedPercentageAbove">
+                  <need>Joy</need>
+                  <threshold>0.9</threshold>
+                  <invert>true</invert>
+                  <subNodes>
+                    <li Class="JobGiver_IdleJoy" />
+                  </subNodes>
+                </li>
+              
+                <!-- Wander -->
                 <li Class="JobGiver_WanderColony">
                   <maxDanger>None</maxDanger>
                 </li>
@@ -207,7 +230,9 @@
             <li Class="ThinkNode_ConditionalNeutralFaction">
               <subNodes>
                 <li Class="JobGiver_PatientGoToBed" />
-                <li Class="JobGiver_ExitMapBest" />
+                <li Class="JobGiver_ExitMapBest">
+                  <defaultLocomotion>Walk</defaultLocomotion>
+                </li>
               </subNodes>
             </li>
           </subNodes>
@@ -218,6 +243,28 @@
         </li>
 
         <li Class="JobGiver_IdleError" />
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+	
+	<ThinkTreeDef>
+		<defName>HumanlikeConstant</defName>
+		<thinkRoot Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+					<subNodes>
+            <!-- Flee explosion -->
+            <li Class="JobGiver_FleeExplosion" />
+        
+            <!-- Hostility response -->
+            <li Class="JobGiver_ConfigurableHostilityResponse" />
+            
+            <!-- Lord directives -->
+            <li Class="ThinkNode_Subtree">
+              <treeDef>LordDutyConstant</treeDef>
+            </li>
+					</subNodes>
+				</li>
 			</subNodes>
 		</thinkRoot>
 	</ThinkTreeDef>
