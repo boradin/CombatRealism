@@ -88,7 +88,7 @@
       <preferability>MealAwful</preferability>
       <nutrition>0.90</nutrition>
       <joy>-0.04</joy>
-      <specialThoughtDirect>AteNutrientPasteMeal</specialThoughtDirect>
+      <specialThoughtDirect>AteAwfulMeal</specialThoughtDirect>
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>Meal_Eat</soundEat>
     </ingestible>

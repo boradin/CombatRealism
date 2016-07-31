@@ -285,7 +285,7 @@
       <li>Apparel</li>
     </thingCategories>
     <costList>
-      <Components>18</Components>
+      <Component>18</Component>
       <Plasteel>135</Plasteel>
     </costList>
     <apparel>

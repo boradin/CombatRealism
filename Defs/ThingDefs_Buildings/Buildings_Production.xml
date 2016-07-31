@@ -32,9 +32,9 @@
     <costStuffCount>100</costStuffCount>
     <CostList>
       <Steel>50</Steel>
-      <Components>5</Components>
+      <Component>5</Component>
     </CostList>
-    <AltitudeLayer>MoteLow</AltitudeLayer>
+    <AltitudeLayer>Building</AltitudeLayer>
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
@@ -89,7 +89,7 @@
       <Steel>150</Steel>
       <Components>5</Components>
     </CostList>
-    <AltitudeLayer>MoteLow</AltitudeLayer>
+    <AltitudeLayer>Building</AltitudeLayer>
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>

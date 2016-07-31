@@ -8,7 +8,7 @@
     <category>Item</category>
     <graphicData>
       <texPath>Things/Filth/LiquidFuel</texPath>
-      <!-- <graphicClass>Graphic_Single</graphicClass> -->
+      <graphicClass>Graphic_Cluster</graphicClass>
       <shaderType>Transparent</shaderType>
     </graphicData>
     <altitudeLayer>LowPlant</altitudeLayer>

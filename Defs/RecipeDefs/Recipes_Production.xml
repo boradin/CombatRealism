@@ -10,6 +10,7 @@
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
     <workAmount>10000</workAmount>
+	<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <ingredients>
       <li>
         <filter>
@@ -26,7 +27,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <Components>1</Components>
+      <Component>1</Component>
     </products>
 		<skillRequirements>
 			<li>

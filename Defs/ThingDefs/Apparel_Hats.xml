@@ -46,7 +46,7 @@
 	  <AimingAccuracy>1.15</AimingAccuracy>
     </equippedStatOffsets>
     <costList>
-      <Components>7</Components>
+      <Component>7</Component>
       <Plasteel>50</Plasteel>
 	  <DevilstrandCloth>20</DevilstrandCloth>
     </costList>

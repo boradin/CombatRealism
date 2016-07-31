@@ -16,8 +16,8 @@
     <armorCategory>Electric</armorCategory>
     <explosionDamage>35</explosionDamage>
     <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
-    <explosionCellMote>Mote_BlastEMP</explosionCellMote>
-    <soundExplosion>MortarEMP_Explode</soundExplosion>
+    <explosionCellMote>Mote_BlastDry</explosionCellMote>
+    <soundExplosion>Explosion_Stun</soundExplosion>
   </DamageDef>
 
 </Defs>

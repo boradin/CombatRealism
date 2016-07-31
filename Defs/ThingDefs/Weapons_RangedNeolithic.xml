@@ -206,7 +206,7 @@
         <projectileDef>Projectile_GreatArrow_Stone</projectileDef>
         <warmupTicks>80</warmupTicks>
         <range>30</range>
-        <soundCast>BowGreat</soundCast>
+        <soundCast>BowLarge</soundCast>
       </li>
     </verbs>
 	<comps>

@@ -204,7 +204,7 @@
 	    <explosionDamage>10</explosionDamage>
 	    <explosionDamageDef>Electrical</explosionDamageDef>
 	    <explosionRadius>4</explosionRadius>
-	    <soundExplode>MortarEMP_Explode</soundExplode>
+	    <soundExplode>Explosion_EMP</soundExplode>
 	  </li>
 	</comps>
   </ThingDef>

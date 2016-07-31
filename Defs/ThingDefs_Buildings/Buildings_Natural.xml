@@ -60,7 +60,7 @@
     <building>
       <isInert>true</isInert>
       <isNaturalRock>true</isNaturalRock>
-      <soundMined>CollapseRock</soundMined>
+      <!-- <soundMined>CollapseRock</soundMined> -->
       <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
       <deconstructible>false</deconstructible>
     </building>

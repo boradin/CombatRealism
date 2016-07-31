@@ -20,9 +20,9 @@
         <!-- Keep lying down if we have to -->
 				<li Class="ThinkNode_ConditionalMustKeepLyingDown">
 					<subNodes>
-            <li Class="JobGiver_KeepLyingDown" />
-				</subNodes>
-        </li>
+						<li Class="JobGiver_KeepLyingDown" />
+					</subNodes>
+				</li>
       
         <li Class="ThinkNode_Subtree">
           <treeDef>Downed</treeDef>
